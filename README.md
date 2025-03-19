@@ -7,4 +7,4 @@ Deployment Order
 - mysql/
 - laravel/
 
-in ubuntu pvc.yaml, if adjust the storageclassname based on where the kubernetes is deployed, if on premise the storageclassname it must be `local-path`, if is cloud based (like GKE), determine with getting the storageclassname using `kubectl get sc`
+in mysql/values.yaml, adjust the storageclassname based on where the kubernetes is deployed, if on premise the storageclassname it must be `local-path`, if is cloud based (like GKE), determine with getting the storageclassname using `kubectl get sc`
