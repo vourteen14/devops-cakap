@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ2b3VydGVlbjE0IiwicGFzc3dvcmQiOiJkY2tyX3BhdF91a084SmY4ZnAtOWdKVmdBSlk4U21MaU44MU0iLCJlbWFpbCI6ImFuZ2dhLnN1cmlhbmEuMjAyQGdtYWlsLmNvbSIsImF1dGgiOiJkbTkxY25SbFpXNHhORHBrWTJ0eVgzQmhkRjkxYTA4NFNtWTRabkF0T1dkS1ZtZEJTbGs0VTIxTWFVNDRNVTA9In19fQ==
+kind: Secret
+metadata:
+  name: laravel-docker
+type: kubernetes.io/dockerconfigjson

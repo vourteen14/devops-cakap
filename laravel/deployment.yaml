@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel
+  template:
+    metadata:
+      labels:
+        app: laravel
+    spec:
+      containers:
+        - name: laravel
+          image: vourteen14/laravel-vuln:latest
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: laravel-configmap
+            - secretRef:
+                name: laravel-secret
+          resources:
+            requests:
+              cpu: "50m"
+            limits:
+              cpu: "250m"
+      imagePullSecrets:
+        - name: laravel-docker

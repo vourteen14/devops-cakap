@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: laravel-ingress
+  annotations:
+    cert-manager.io/issuer: "letsencrypt"
+    cert-manager.io/acme-challenge-type: http01
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: laravel.angga-sr.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: laravel-service
+                port:
+                  number: 7289
+  tls:
+    - hosts:
+        - laravel.angga-sr.xyz
+      secretName: laravel-tls

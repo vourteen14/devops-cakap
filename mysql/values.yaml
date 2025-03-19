@@ -1,0 +1,10 @@
+auth:
+  rootPassword: "root123jj" #just for testing
+  database: "admin_db" #just for testing
+  username: "admin_user" #just for testing
+  password: "admin_usercckkll" #just for testing
+primary:
+  persistence:
+    enabled: true
+    storageClass: "standard"
+    size: 10Gi
